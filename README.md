@@ -1,2 +1,11 @@
 # Air-Quality-Analysis
-## THE WORK IN PROGRESS
+Basically, the Project is based on the analysis of the air quality index, where I am performing the statistical analysis and checking the accuracy by applying the linear regression model as well as the multiple linear regression model. The overall project is based on analyzing the dataset and applying the transformation as needed. In this project, we first visualized the data to get some brief insight into it, and then we did a deep analysis of the data distribution, where I checked if the data is normally distributed or not. If not, then I apply the data transformation technique and check the performance with the help of a linear or multiple linear regression model and cross validate it, and I also visualize the data before and after transformation to get a better idea of how data transformation works inside the data.
+
+## About Dataset
+Embark on a journey through the air quality landscape of Hyderabad City with our meticulously curated dataset. This invaluable resource, derived from trusted government sources, presents a comprehensive view of the air quality index (AQI) alongside various pollutant parameters. With 72 rows and 11 columns of data at your disposal, including PM10, SO2, NOx, PM2.5, Ammonia, O3, CO, Benzene, and the AQI, you'll have the tools to explore and analyze the city's air quality patterns and trends.
+
+Our dataset, inspired by the need for environmental awareness and analysis, offers an unrivaled opportunity for researchers, data scientists, and environmental enthusiasts. By examining the various pollutant concentrations, we aim to shed light on the factors contributing to air pollution and encourage sustainable initiatives to mitigate its impact. The inclusion of historical data spanning different months empowers you to observe seasonal variations and potential correlations between pollutant levels, enabling a deeper understanding of the city's air quality dynamics.
+
+With a focus on transparency and reliability, the data has been sourced directly from reputable government sources. This ensures the accuracy and credibility of the information, providing a solid foundation for impactful research and data-driven decision-making. By leveraging this dataset, you can identify critical areas for intervention, devise targeted pollution reduction strategies, and contribute to the collective effort in creating a cleaner and healthier environment.
+
+In short the data is taken through kaggle dataset collection and the data is related to hyderabad city
