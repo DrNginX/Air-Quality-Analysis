@@ -8,4 +8,4 @@ Our dataset, inspired by the need for environmental awareness and analysis, offe
 
 With a focus on transparency and reliability, the data has been sourced directly from reputable government sources. This ensures the accuracy and credibility of the information, providing a solid foundation for impactful research and data-driven decision-making. By leveraging this dataset, you can identify critical areas for intervention, devise targeted pollution reduction strategies, and contribute to the collective effort in creating a cleaner and healthier environment.
 
-In short the data is taken through kaggle dataset collection and the data is related to hyderabad city
+In short, the data is taken through kaggle dataset collection and the data is related to hyderabad city air quality where it have 72 rows and 11 columns.
