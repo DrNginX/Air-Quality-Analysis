@@ -67,3 +67,49 @@ The probability plot functionality within the `scipy.stats` module offers a powe
 
 Basically this project is totally based on the statistical analysis so the visualization is also is based on the statistical. In the starting of visualization section I visualize the box whisker chart where we try to understand that what column of data is scaled on what range?.
 ![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/f2484017-9928-4c52-9d6e-968639024f27)
+
+Now we get the rough statistical mesurement or assumption that the PM10 data is in between the 80-127 or SO2 have many outliers as well as the range of SO2 is in between the 10- 18. I am again repeating it is just assumption not accurate value. So with the help of this we just got the idea of how much we have to pre-process the data or refine the data.
+
+Then after we have perform the histogram chart which give the basic idea of skewness or data skewness.
+![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/86c86549-8469-445b-ad17-300e91afa223)
+
+The very basic we have not proper skewness idea but after viewing this we have rough estimation that the NH13 data is equaly distribute, CO have right skewed data as well as messing also. So this graph is generally used for this.
+
+Our next graph is scatter plot where at once i have done and visualize the data where each data is just like matix multiplication or in easy language when each row are multipied with each column and generate the scatter plot.
+![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/23ec92c7-8c94-4eb0-80d5-e0b7e06d0adb)
+
+In this image the scatter plot is formed with the help of matics concept where while once the X-axis change with column and along the Y-axis randomly change as per the matrics or columns number.
+
+Just after this graph, the next graph or visualization is also same but there have little change inside it the scatter of the plot is generated as according to the year. This graph show you that how much increment or decrement is done inside the AIQ as per the year.
+
+Then I visualize the Vilon plot, Line plot and seperate scatter plot for better understanding.
+
+## Statistical Analysis
+
+Statistical analysis is the systematic process of extracting insights and making sense of data through mathematical and computational techniques. It encompasses a wide range of methods, from summarizing and describing data to inferring relationships and patterns. By applying statistical techniques, data analysts and researchers can uncover hidden trends, validate hypotheses, and make informed decisions. This involves measures such as mean, median, and standard deviation, as well as more advanced techniques like regression analysis, hypothesis testing, and ANOVA. Statistical analysis enables the quantification of uncertainty, helping to assess the reliability of conclusions drawn from data. It plays a pivotal role across various fields, from scientific research and economics to healthcare and social sciences. The goal is to transform raw data into meaningful information, providing valuable insights that guide understanding, decision-making, and policy formulation.
+
+Statistical analysis with regression is a cornerstone of data science that delves into the relationships between variables, aiming to understand how one or more predictors influence a target outcome. Regression models provide a structured framework for quantifying these relationships, enabling us to make predictions, infer causal links, and uncover underlying patterns. Whether it's linear regression for simple relationships or more complex variants like multiple regression, polynomial regression, or logistic regression for classification tasks, these models allow us to quantify the impact of independent variables on the dependent variable. Through techniques like parameter estimation and hypothesis testing, statistical analysis with regression provides insights into the strength, direction, and significance of associations, allowing data scientists and analysts to draw meaningful conclusions from their data. This approach has applications across various fields, from economics and social sciences to healthcare and engineering, guiding decision-making and fostering a deeper understanding of the intricate connections that drive real-world phenomena.
+
+After the statistical analysis portion is done I have start visualizing the transformation and without transformation data with the help of Scipy library where it give result like :- 
+![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/ce50db0e-b11d-4796-bb2f-00d3bfb40f32)
+
+I also visualize the 3rd dimension graph to understand more clearly the nature of data and the output is like:-
+![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/d9f2325e-1e71-43df-b88b-584222ff9809)
+![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/f0c3180c-b835-4cde-8199-ec380deb3659)
+![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/ea8ffe9a-a660-4d81-be96-866a311b3202)
+
+Then after we have done more comparison with before and after transformation of data and find which transformation is best for data skewness. 
+
+## Final Conclusion of this analysis is :-
+There are several reasons for negative values arrived when we perform the cross validation score those are :-
+
+Scoring Function
+Data Preprocessing
+Model Implementation
+Model Hyperparameters
+Data Leakage
+Feature Selection and Engineering
+Model Complexity
+Insufficient Data
+Model Validation
+and I personally believe and think that the negative values of cross validation score occured due to the insufficient data during the model turing and I think it is an important factor to considerd that sometimes or in some cases, negative scores can occur when there is data is not sufficient to train the model effectively. and for that we will try to consider obtaining more data or using data augmentation techniques if possible.
