@@ -121,7 +121,8 @@ Here are some common types of regression:
 
 14. Quantile Regression: Instead of modeling the mean of the dependent variable, quantile regression models different quantiles, helping to understand the relationship across the entire distribution.
 
-where, among all, I have only used linear and multiple-linear regression.
+where, among all, I have only used linear and multiple-linear regression only. So let's discuss the result of regression before and after transformation
+
 ## The final conclusion of this analysis is:
 There are several reasons for negative values arriving when we perform the cross-validation score, and those are:
 Scoring FunctionData 
@@ -132,4 +133,6 @@ LeakageFeature Selection and
 EngineeringModel Complexity
 Insufficient Data
 Model Validationand 
+
 I personally believe and think that the negative values of the cross-validation score occurred due to the insufficient data during the model training, and I think it is an important factor to consider that sometimes, or in some cases, negative scores can occur when the data is not sufficient to train the model effectively. and for that, we will try to consider obtaining more data or using data augmentation techniques if possible.
+
