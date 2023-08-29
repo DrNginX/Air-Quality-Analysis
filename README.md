@@ -81,6 +81,8 @@ Our next graph is scatter plot where at once i have done and visualize the data 
 In this image the scatter plot is formed with the help of matics concept where while once the X-axis change with column and along the Y-axis randomly change as per the matrics or columns number.
 
 Just after this graph, the next graph or visualization is also same but there have little change inside it the scatter of the plot is generated as according to the year. This graph show you that how much increment or decrement is done inside the AIQ as per the year.
+![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/17ddb23d-f418-4eb1-9f35-b0ef2fb0d6c8)
+
 
 Then I visualize the Vilon plot, Line plot and seperate scatter plot for better understanding.
 
