@@ -76,11 +76,56 @@ I also visualized the 3rd dimension graph to understand more clearly the nature 
 ![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/d9f2325e-1e71-43df-b88b-584222ff9809)
 ![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/f0c3180c-b835-4cde-8199-ec380deb3659)
 ![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/ea8ffe9a-a660-4d81-be96-866a311b3202)
+
 Then, after we have done more comparisons with before and after transformations of data, we can find which transformation is best for data skewness.
 
 ## Description
-Basically, the statistical analysis is totally based on the statistics where lots of things came into the scenario. In statistical analysis, we perform hypothesis testing, the chi-square test, and regression analysis to perform some predictive analysis and get some patterns. In normal data analysis, we use machine learning algorithms for prediction, but in statistical analysis, we use statistical concepts that help in the prediction process. So I use regression, which is a basic as well as a vast method. This machine learning as well as statistical algorithm finds the relationship between the dependent and independent variables.
+Basically, the statistical analysis is totally based on the statistics where lots of things came into the scenario. In statistical analysis, we perform hypothesis testing, the chi-square test, and regression analysis to perform some predictive analysis and get some patterns. In normal data analysis, we use machine learning algorithms for prediction, but in statistical analysis, we use statistical concepts that help in the prediction process. So I use regression, which is a basic as well as a vast method. This machine learning algorithm as well as statistical approaches finds the relationship between the dependent and independent variables.What I have done in this project is to take the analysis of all data transformation and try to find which transformation is best for what type of data and this thing is done by performing the Linear regression. After getting the approx. result then I use the column transformation for apply individual transformation for each features.
 
+### Process of applying
+![Block Diagram](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/1edfb1b5-9250-411c-98f0-2236128b1596)
+
+
+
+
+So some result of before and after applying the power as well as functional transformation on features and we analyze which one transformation is best for this dataset.
+##### R2-Score
+The R-squared (R2) score, also known as the coefficient of determination, is a statistical measure used to evaluate the goodness of fit of a regression model. It quantifies the proportion of the variance in the dependent variable (the variable you are trying to predict) that can be explained by the independent variables (the variables used in the regression model). In other words, R2 measures how well the regression model explains the variability in the data.
+
+The R2 score is a value between 0 and 1, where:
+
+- R2 = 0 indicates that the model does not explain any of the variability in the data, and it is a poor fit.
+- R2 = 1 indicates that the model perfectly explains all of the variability in the data, and it is an excellent fit.
+
+Typically, R2 values are between 0 and 1, with higher values indicating a better fit. However, it's essential to interpret R2 in the context of the specific problem and dataset. A high R2 score does not necessarily mean that the model is the best choice for prediction or that it captures the causal relationship between variables correctly. It only tells you how well the model fits the data in terms of explaining the variation.
+
+In summary, the R2 score is a measure of how well a regression model fits the data by explaining the variance in the dependent variable. It is a valuable tool for assessing the quality of regression models and comparing different models' performance.
+
+##### Cross-Validation
+
+Cross-validation is a technique used in machine learning and statistics to assess the performance and generalizability of a predictive model. It helps ensure that a model can make accurate predictions on unseen data by partitioning the dataset into subsets for training and evaluation. The primary goal of cross-validation is to estimate how well a model will perform on new, unseen data, and it helps to mitigate issues like overfitting and underfitting.
+
+Here's a brief overview of how cross-validation works:
+
+Data Splitting: The dataset is divided into two or more subsets: a training set and a testing (validation) set. In the simplest form, this is typically done as a 70-30 or 80-20 split, with a larger portion of the data used for training. However, for cross-validation, this splitting process is more systematic and is repeated multiple times.
+
+K-Fold Cross-Validation: One common method of cross-validation is k-fold cross-validation. In k-fold cross-validation, the dataset is divided into 'k' equally-sized subsets or folds. The model is trained and evaluated 'k' times, with each fold serving as the validation set once and the remaining folds as the training set.
+
+Performance Evaluation: For each iteration or fold, the model is trained on the training data and then evaluated on the validation data. Metrics such as accuracy, mean squared error, or the R-squared score (depending on the type of problem) are computed to assess the model's performance.
+
+Aggregation of Results: The performance metrics from each fold are typically averaged or aggregated to provide a single measure of the model's overall performance. This aggregated performance metric is often used to make decisions about the model's quality and generalizability.
+
+Benefits: Cross-validation provides several advantages:
+
+It provides a more reliable estimate of a model's performance because it assesses its performance on multiple subsets of the data.
+It helps identify and mitigate problems like overfitting, as the model is evaluated on different data partitions.
+It ensures that the model's performance is not overly influenced by a specific data split, which can happen when using a single fixed train-test split.
+
+### Result:-
+1. Simple Linear regression
+   R2-Score :- 0.44
+   Cross-Validation :- -0.1088
+2. 
 ### Dependent variable:-
 The dependent variable, also known as the response variable or outcome variable, is the variable in a research or statistical analysis that you're trying to explain, predict, or understand. In a cause-and-effect relationship, the dependent variable is the one that changes in response to changes in the independent variable(s).
 For example, let's consider a simple scenario: you're studying the effect of studying time on exam scores. In this case, the exam score would be the dependent variable. You want to determine how changes in the amount of time spent studying (an independent variable) influence the outcome, which is the exam score.
