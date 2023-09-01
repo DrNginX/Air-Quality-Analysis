@@ -209,14 +209,14 @@ where, among all, I have only used linear and multiple-linear regression only. S
 
 ## The final conclusion of this analysis is:
 There are several reasons for negative values arriving when we perform the cross-validation score, and those are:
-Scoring FunctionData 
-PreprocessingModel 
-ImplementationModel 
-HyperparametersData 
-LeakageFeature Selection and 
-EngineeringModel Complexity
-Insufficient Data
-Model Validationand 
+1. Scoring FunctionData 
+2. PreprocessingModel 
+3. ImplementationModel 
+4. HyperparametersData 
+5. LeakageFeature Selection and 
+6. EngineeringModel Complexity
+7. Insufficient Data
+8. Model Validationand 
 
 I personally believe and think that the negative values of the cross-validation score occurred due to the insufficient data during the model training, and I think it is an important factor to consider that sometimes, or in some cases, negative scores can occur when the data is not sufficient to train the model effectively. and for that, we will try to consider obtaining more data or using data augmentation techniques if possible.
 
