@@ -68,7 +68,7 @@ Then I visualize the Vilon plot, line plot, and separate scatter plot for better
 
 ## Statistical Analysis
 Statistical analysis is the systematic process of extracting insights and making sense of data through mathematical and computational techniques. It encompasses a wide range of methods, from summarizing and describing data to inferring relationships and patterns. By applying statistical techniques, data analysts and researchers can uncover hidden trends, validate hypotheses, and make informed decisions. This involves measures such as mean, median, and standard deviation, as well as more advanced techniques like regression analysis, hypothesis testing, and ANOVA. Statistical analysis enables the quantification of uncertainty, helping to assess the reliability of conclusions drawn from data. It plays a pivotal role across various fields, from scientific research and economics to healthcare and the social sciences. The goal is to transform raw data into meaningful information, providing valuable insights that guide understanding, decision-making, and policy formulation.
-Statistical analysis with regression is a cornerstone of data science that delves into the relationships between variables, aiming to understand how one or more predictors influence a target outcome. Regression models provide a structured framework for quantifying these relationships, enabling us to make predictions, infer causal links, and uncover underlying patterns. Whether it's linear regression for simple relationships or more complex variants like multiple regression, polynomial regression, or logistic regression for classification tasks, these models allow us to quantify the impact of independent variables on the dependent variable. Through techniques like parameter estimation and hypothesis testing, statistical analysis with regression provides insights into the strength, direction, and significance of associations, allowing data scientists and analysts to draw meaningful conclusions from their data. This approach has applications across various fields, from economics and social sciences to healthcare and engineering, guiding decision-making and fostering a deeper understanding of the intricate connections that drive real-world phenomena.
+Statistical analysis with regression is a cornerstone of data science that delves into the relationships between variables, aiming to understand how one or more predictors influence a target outcome. Regression models provide a structured framework for quantifying these relationships, enabling us to make predictions, infer causal links, and uncover underlying patterns. Whether it's linear regression for simple relationships or more complex variants like multiple regression, polynomial regression, or logistic regression for classification tasks, these models allow us to quantify the impact of independent variables on the dependent variable. Through techniques like parameter estimation and hypothesis testing, statistical analysis with regression provides insights into the strength, direction, and significance of associations, allowing data scientists and analysts to draw meaningful conclusions from their data. This approach has applications across various fields, from economics and social sciences to healthcare and engineering, guiding decision-making and fostering a deeper understanding of the intricate connections that drive real-world phenomena. 
 After the statistical analysis portion is done, I have to start visualizing the transformation and without transformation data with the help of the Scipy library, where it gives results like:
 ![image](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/ce50db0e-b11d-4796-bb2f-00d3bfb40f32)
 
@@ -85,11 +85,10 @@ Basically, the statistical analysis is totally based on the statistics where lot
 ### Process of applying
 ![Block Diagram](https://github.com/DrNginX/Air-Quality-Analysis/assets/86653787/1edfb1b5-9250-411c-98f0-2236128b1596)
 
+So, some result of before and after applying the power as well as functional transformation on features and we analyze which one transformation is best for this dataset.
 
-
-
-So some result of before and after applying the power as well as functional transformation on features and we analyze which one transformation is best for this dataset.
 ##### R2-Score
+
 The R-squared (R2) score, also known as the coefficient of determination, is a statistical measure used to evaluate the goodness of fit of a regression model. It quantifies the proportion of the variance in the dependent variable (the variable you are trying to predict) that can be explained by the independent variables (the variables used in the regression model). In other words, R2 measures how well the regression model explains the variability in the data.
 
 The R2 score is a value between 0 and 1, where:
@@ -99,7 +98,7 @@ The R2 score is a value between 0 and 1, where:
 
 Typically, R2 values are between 0 and 1, with higher values indicating a better fit. However, it's essential to interpret R2 in the context of the specific problem and dataset. A high R2 score does not necessarily mean that the model is the best choice for prediction or that it captures the causal relationship between variables correctly. It only tells you how well the model fits the data in terms of explaining the variation.
 
-In summary, the R2 score is a measure of how well a regression model fits the data by explaining the variance in the dependent variable. It is a valuable tool for assessing the quality of regression models and comparing different models' performance.
+In summary, the R2 score is a measure of how well a regression model fits the data by explaining the variance in the dependent variable. It is a valuable tool for assessing the quality of regression models and comparing different models' performance.(From ChatGPT)
 
 ##### Cross-Validation
 
@@ -119,14 +118,54 @@ Benefits: Cross-validation provides several advantages:
 
 It provides a more reliable estimate of a model's performance because it assesses its performance on multiple subsets of the data.
 It helps identify and mitigate problems like overfitting, as the model is evaluated on different data partitions.
-It ensures that the model's performance is not overly influenced by a specific data split, which can happen when using a single fixed train-test split.
+It ensures that the model's performance is not overly influenced by a specific data split, which can happen when using a single fixed train-test split. (From ChatGPT)
 
 ### Result:-
+
 1. Simple Linear regression
    R2-Score :- 0.44
    Cross-Validation :- -0.1088
-2. 
+
+2. Box Cox Transformation
+   R2-Score :- 0.62
+   Cross-Validation :- -0.08
+
+3. Standard-Scaler
+   R2-Score :- 0.62047
+   Cross-Validation :- -0.08
+
+4. Multiple Linear Regression
+   R2-Score :- 0.31
+   Cross-Validation :- -0.81224
+
+## Choosing the transformation according to data
+
+After the analysis, I come to the conclusion that the transformation doesn't change the R2 score or cross-validation score as compared to the simple linear regression. So, now I try to apply the transformation individually to each individual feature of the dataset. In the previous scenario, I applied the transformation to the whole dataset, but now I apply the transformation separately and fetch the result of which transformation is the best for which type of skewed data. So, for this experiment, I have applied the 5 types of transformation one by one to each feature or column of the dataset, where the transformations are in both the power transformation and the functional transformation:
+
+1. Box-Cox Transformation (Power Transformation)
+2. Yeo-Jonshon Transformation (Power Transformation)
+3. Log1p Transformation (Functional Transformation)
+4. Exponential Transformation (Functional Transformation)
+5. Reciprocal Transformation (Functional Transformation)
+6. Square Transformation (Functional Transformation)
+7. Square-root Transformation (Functional Transformation)
+8. Log10 Transformation (Functional Transformation)
+
+After analyzing the whole probability graph, we got some output about which transformation is best for which feature or columns, so the output is:
+1. PM10 = Box-Cox Transformation (Power Transformation)
+2. SO2 = Box-Cox Transformation (Power Transformation)
+3. NOX = Yeo-Jonshon Transformation (Power Transformation)
+4. PM2.5 = Box-Cox Transformation (Power Transformation)
+5. NH3 = Box-Cox Transformation (Power Transformation)
+6. O3 = Box-Cox Transformation (Power Transformation)
+7. CO = Exponential Transformation (Functional Transformation), Log10 Transformation (Functional Transformation)
+8. Benzene = square-root transformation (functional transformation)
+
+and then after I had tried to make a column transformation because each one has a different transformation or each feature of the dataset supports the different types of transformation, we had to need a column transformation. So according to need, I developed and deployed the column transformation according to their feature transformation.
+
+
 ### Dependent variable:-
+
 The dependent variable, also known as the response variable or outcome variable, is the variable in a research or statistical analysis that you're trying to explain, predict, or understand. In a cause-and-effect relationship, the dependent variable is the one that changes in response to changes in the independent variable(s).
 For example, let's consider a simple scenario: you're studying the effect of studying time on exam scores. In this case, the exam score would be the dependent variable. You want to determine how changes in the amount of time spent studying (an independent variable) influence the outcome, which is the exam score.
 
@@ -166,7 +205,7 @@ Here are some common types of regression:
 
 14. Quantile Regression: Instead of modeling the mean of the dependent variable, quantile regression models different quantiles, helping to understand the relationship across the entire distribution.
 
-where, among all, I have only used linear and multiple-linear regression only. So let's discuss the result of regression before and after transformation
+where, among all, I have only used linear and multiple-linear regression only. So let's discuss the result of regression before and after transformation (From ChatGPT)
 
 ## The final conclusion of this analysis is:
 There are several reasons for negative values arriving when we perform the cross-validation score, and those are:
